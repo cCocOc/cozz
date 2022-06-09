@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ex51.html -->
+  <title>연습문제14 - 강아지블로그를 Flexbox로 구현하기</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    #wrap {
+      /* 가변너비 */
+      width: 100%;
+      /* 최소너비 */
+      min-width: 760px;
+      /* 최대너비 */
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .box {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    a {
+        text-decoration: none;
+    }
+    #header {
+        background-color: rgb(196, 165, 223);
+        width: auto;
+        height: 70px;
+        color: black;
+    }
+    #nav {
+        background-color: rgb(130, 223, 130);
+        width: auto;
+        height: 40px;
+        color: white;
+    }
+    #nav a {
+        color: white;
+        margin: 5px;
+    }
+    #nav a:link {
+      color: white;
+    }
+    #nav a:visited {
+      color: white;
+    }
+    #main {
+        background-color: bisque;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    img {
+        width: 200px; height: 150px;
+        object-fit: cover;
+    }
+    #section {
+        background-color: rgb(224, 175, 146);
+        width: 25%;
+        height:auto;
+        border: 1px solid rgb(0, 61, 0);
+        margin: 10px;
+        padding: 15px 5px;
+        display: flex;
+    }
+    #section a:link {
+        color: black;
+    }
+    #section a:visited {
+        color: black;
+    }
+    #aside {
+        width: 70%;
+        height: auto;
+        align-items: flex-start;
+        margin: 10px;       
+    }
+    #footer {
+        background-color: rgb(9, 177, 31);
+        width: auto;
+        height: 50px;
+        color: white;
+    }
+    #footer a:link {
+      color: black;
+      margin: 5px;
+    }
+    #footer a:visited {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="box" id="header"><h1>로트와일러 - Rottweiler</h1></div>
+    <div class="box" id="nav">
+        <a href="#">About</a>
+        <a href="#">History</a>
+        <a href="#">Information</a>
+        <a href="#">SNS</a>
+    </div>
+    <div class="box" id="main">
+      <div class="box" id="section">
+        <h4>Rottweiler</h4>
+        <img src="rott.jpg" alt="Rottweiler">
+          <ul>
+              <li><a href="#"> 기본특성</a></li>
+              <li><a href="#"> 단점</a></li>
+              <li><a href="#"> 키울 시 주의점</a></li>
+              <li><a href="#"> 파생 혼종견</a></li>
+          </ul>
+      </div>
+      <div class="box" id="aside">
+        <h3>Rottweiler</h3><br>
+        <p>어깨높이: 56~69cm <br>
+        체중: 수컷 50~60 kg, 암컷 35~48 kg </p><br>
+        <p>독일 원산의 개 품종. 색상이 도베르만과 비슷하지만 전체적으로 체구가 더 크고 강인한 인상이다.
+        단단한 근육질의 몸에 큰 골격, 굵은 뼈대를 지니고, 특히 뒷다리는 도약력이 좋다 .
+        겉보기와는 달리 무척 똑똑해서 훈련을 매우 빠르게 받아들인다.
+        수명이 8년으로 짧다. 어쩔 때는 10년 넘게 사는 개체들도 있다.
+        유럽과 미국에서는 경비견의 대명사로, 경비견 하면 도베르만과 함께 가장 먼저 떠오르는 견종이다. </p> <br>
+        <p>2천년 가까운 역사를 가진 견종으로, 로트바일러라는 이름은 독일 남서부 바덴뷔르템베르크 주에 위치한 로트바일(Rottweil)시에서 유래되었다
+          로마 제국 시절 로마군 병사들이 가축떼 몰이를 위해 기르던 마스티프종이 시초라고 한다.
+          당시에는 가축 유통이 주로 도축업자들에 의해 이루어졌는데, 이들은 로트바일러를 가축 이동시 가축 경비는 물론 목에다 지갑을 걸어놓는 등 귀중품 경비용으로도 많이 이용했기 때문에 메츠거훈트(Metzgerhund, 도축업자의 개)라고도 불렸다.
+          그 뒤 20세기 초에는 가축 수송이 기차나 자동차로 이뤄지게 되면서 본래의 목양견으로의 쓰임은 줄었으나, 똑똑하고 사납기 때문에 군견/경찰견으로의 수요가 크게 늘었다.
+        </p>
+      </div>
+    </div>
+    <div class="box" id="footer">
+        <a href="#">Subscribe</a>
+        <a href="#">About Author</a>
+        <a href="#">Send us Email</a>
+    </div>
+  </div>
+</body>
+</html>
